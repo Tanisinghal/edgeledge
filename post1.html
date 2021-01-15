@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Post One</title>
+</head>
+
+<body id="home">
+    <header class="hero blog">
+        <div id="navbar" class="navbar top">
+            <h1 class="logo">
+                <span class="text-primary"><i class="fas fa-book-open"></i> Edge</span>Ledger
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#cases">Cases</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <h1>Blog</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="post">
+            <h2>Blog Post One</h2>
+            <p class="meta">
+                <i class="fas fa-user fa-2x"></i> Posted by <strong>John Doe</strong> |January 10 2021
+            </p>
+            <img src="image_resources/blog/blog1.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, eaque eum aliquid fuga doloribus
+                minus eligendi praesentium ad, ex autem architecto provident corrupti assumenda. Voluptates quidem
+                dolorum rem ea sint!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae facilis nesciunt error nostrum eligendi
+                ex dolores illum distinctio, minima aliquid eaque quod sit quibusdam, dolor voluptas! Nostrum saepe
+                vitae doloremque optio id nisi, deleniti rerum voluptatem quis consequuntur culpa iure eos excepturi,
+                possimus fuga ipsam ducimus totam repudiandae labore velit sunt assumenda. Doloribus saepe repellat iure
+                maxime consequuntur voluptatem aut!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione sapiente illo vitae repudiandae?
+                Repellendus commodi ad nostrum sint explicabo iure ab soluta maiores exercitationem placeat repellat,
+                accusamus animi vero earum repudiandae dolor nesciunt voluptate deserunt sed amet excepturi? Ratione sit
+                distinctio quam omnis neque laudantium autem nihil fugiat aliquam.</p>
+        </section>
+    </main>
+
+    <footer class="footer bg-dark">
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+        </div>
+        <p>Copyright &copy; 2020 - EdgeLedger</p>
+    </footer>
+    <script>
+        src = "https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity = "sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+        crossorigin = "anonymous"
+    </script>
+    <script src="js/lightbox.min.js"></script>
+    <script>
+        const navbar = document.getElementById('navbar');
+        let scrolled = false;
+
+        window.onscroll = function () {
+            if (window.pageYOffset > 100) {
+                navbar.classList.remove('top');
+                if (!scrolled) {
+                    navbar.style.transform = 'translateY(-70px)';
+                }
+                setTimeout(function () {
+                    navbar.style.transform = 'translateY(0)';
+                    scrolled = true;
+                }, 200);
+            } else {
+                navbar.classList.add('top');
+                scrolled = false;
+            }
+        };
+    </script>
+</body>
+
+</html>
